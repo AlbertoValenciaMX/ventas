@@ -65,7 +65,8 @@
                 <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Tablas de compras:</h6>
-                        <a class="collapse-item" href="{{ route('compras.index') }}">Compras a provedores</a>
+                        <a class="collapse-item" href="{{ route('compras.index') }}">Compras a proveedores</a>
+                        <a class="collapse-item" href="{{ route('vendedores.index') }}">Vendedores</a>
                         <a class="collapse-item" href="{{ route('tipocompras.index') }}">Tipo de compra</a>
                         <a class="collapse-item" href="{{ route('proveedores.index') }}">Proveedores</a>
                     </div>
@@ -97,7 +98,7 @@
                         <h6 class="collapse-header">Personas externas:</h6>
                         <a class="collapse-item" href="{{ route('clientes.index') }}">Cliente</a>
                         <a class="collapse-item" href="{{ route('tipoclientes.index') }}">Tipo de cliente</a>
-                        <a class="collapse-item" href="{{ route('proveedores.index') }}">Provedores</a>
+                        <a class="collapse-item" href="{{ route('proveedores.index') }}">Proveedores</a>
                     </div>
                 </div>
             </li>
@@ -131,7 +132,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Personas externas:</h6>
                         <a class="collapse-item" href="{{ route('productos.index') }}">Producto</a>
-                        <a class="collapse-item" href="{{ route('inventarios.index') }}">Inventario</a>
+                        <!-- <a class="collapse-item" href="{{ route('inventarios.index') }}">Inventario</a> -->
                         <a class="collapse-item" href="{{ route('categorias.index') }}">Categoria</a>
                     </div>
                 </div>
@@ -141,7 +142,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Movimientos
+                Otros
             </div>
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
@@ -255,7 +256,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-info shadow h-100 py-2">
@@ -320,7 +320,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">¿Estas seguro que deseas abandonar?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
+                            <span aria-hidden="true">x</span>
                         </button>
                     </div>
                     <div class="modal-body">Selecciona salir para cerrar sesión.</div>
