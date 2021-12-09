@@ -22,14 +22,14 @@ Despues descargamos/clonamos el proyecto de drive o github:
 
 [Google Drive](https://drive.google.com/drive/folders/1f0qWpcLXk8CsQShaBWZlhBA3-DqY2k1X?usp=sharing)
 
-## Configuraciónre
+## Configuración
 Ubicamos nuestra carpeta en la que se descargo nuestro proyecto de ventas y lo abrimos en visual studio code o en algún editor similar.
 
 Despues buscamos los archivos ventasBD.sql que nos servira para la creación de la BD y .env donde declaramos las variables de entorno.
 
 ![vsc - carpetas](resources/img/carpetas.png)
 
-Si instalaste XAMPP dirigete a [http://localhost/phpmyadmin](http://localhost/phpmyadmin) o cualquier otro entorno en el que puedas ejecutar los comandos mysql.
+Si instalaste XAMPP dirigete a [localhost/phpmyadmin](http://localhost/phpmyadmin) o cualquier otro entorno en el que puedas ejecutar los comandos mysql.
 
 Copia y pega el contenido del archivo ventasBD.sql en la pestaña SQL y ejecutalo con "Continuar".
 
@@ -39,12 +39,12 @@ En el archivo .env busca las variables que empiezan BD las cuales nos serviran p
 
 Configura todas las variables acorde a tu conexión, si no tienes contraseña en MySQL lo puedes dejar de la siguiente manera:
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=ventas
-DB_USERNAME=root
-DB_PASSWORD=admin123
+DB_CONNECTION=mysql  
+DB_HOST=127.0.0.1  
+DB_PORT=3306  
+DB_DATABASE=ventas  
+DB_USERNAME=root  
+DB_PASSWORD=admin123  
 
 ![variables bd](resources/img/variables.png)
 
