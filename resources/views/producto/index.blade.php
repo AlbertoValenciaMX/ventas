@@ -35,10 +35,10 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-										<th>Idcategoria</th>
 										<th>Nombre</th>
 										<th>Descripcion</th>
 										<th>Precio</th>
+										<th>Categoria</th>
 
                                         <th></th>
                                     </tr>
@@ -47,11 +47,11 @@
                                     @foreach ($productos as $producto)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-											<td>{{ $producto->idCategoria }}</td>
 											<td>{{ $producto->nombre }}</td>
 											<td>{{ $producto->descripcion }}</td>
 											<td>{{ $producto->precio }}</td>
+											<td>{{ $producto->categoria->nombre }}</td>
+
 
                                             <td>
                                                 <form action="{{ route('productos.destroy',$producto->id) }}" method="POST">
