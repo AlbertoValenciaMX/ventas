@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Idtipocliente</th>
+										<th>Nivel</th>
 										<th>Nombre</th>
 										<th>Domicilio</th>
 										<th>Estado</th>
@@ -54,7 +54,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $cliente->idTipoCliente }}</td>
+											<td>{{ $cliente->tipocliente->nivel }}</td>
 											<td>{{ $cliente->nombre }}</td>
 											<td>{{ $cliente->domicilio }}</td>
 											<td>{{ $cliente->estado }}</td>

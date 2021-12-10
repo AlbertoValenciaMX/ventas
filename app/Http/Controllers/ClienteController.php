@@ -33,7 +33,7 @@ class ClienteController extends Controller
     public function create()
     {
         $cliente = new Cliente();
-        $tipoclientes = Tipocliente::pluck('nivel','descuento', 'id');
+        $tipoclientes = Tipocliente::pluck('nivel','id');
         return view('cliente.create', compact('cliente','tipoclientes'));
     }
 
@@ -75,8 +75,8 @@ class ClienteController extends Controller
     public function edit($id)
     {
         $cliente = Cliente::find($id);
-
-        return view('cliente.edit', compact('cliente'));
+        $tipoclientes = Tipocliente::pluck('nivel','id');
+        return view('cliente.edit', compact('cliente','tipoclientes'));
     }
 
     /**

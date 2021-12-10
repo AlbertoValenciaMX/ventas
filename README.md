@@ -57,7 +57,7 @@ Despues abrimos una nueva terminal
 y escribimos los siguientes comandos:
 
 ```bash
-php artisan key:generator
+php artisan key:generate
 php artisan serve
 ```
 
