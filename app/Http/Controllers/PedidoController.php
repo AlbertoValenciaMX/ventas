@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pedido;
+use App\Models\Producto;
+use App\Models\Cliente;
+use App\Models\Vendedore;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +35,10 @@ class PedidoController extends Controller
     public function create()
     {
         $pedido = new Pedido();
-        return view('pedido.create', compact('pedido'));
+        $productos = Producto::pluck('nombre', 'id');
+        $clientes = Cliente::pluck('nombre', 'id');
+        $vendedores = Vendedore::pluck('nombre', 'id');
+        return view('pedido.create', compact('pedido', 'productos', 'clientes', 'vendedores'));
     }
 
     /**
@@ -73,8 +79,10 @@ class PedidoController extends Controller
     public function edit($id)
     {
         $pedido = Pedido::find($id);
-
-        return view('pedido.edit', compact('pedido'));
+        $productos = Producto::pluck('nombre', 'id');
+        $clientes = Cliente::pluck('nombre', 'id');
+        $vendedores = Vendedore::pluck('nombre', 'id');
+        return view('pedido.edit', compact('pedido', 'productos', 'clientes', 'vendedores'));
     }
 
     /**

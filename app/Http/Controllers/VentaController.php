@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Venta;
+use App\Models\Tipovendedore;
+use App\Models\Metodopago;
+use App\Models\Promocione;
 use Illuminate\Http\Request;
 
 /**

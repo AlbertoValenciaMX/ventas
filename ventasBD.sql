@@ -188,3 +188,93 @@ CREATE TABLE facturas (
   constraint facturasPK primary key (id),
   constraint facturaFK1 foreign key (idVenta) references ventas (id)
 ) ENGINE = InnoDB;
+
+insert into categorias(nombre,created_at,updated_at)
+values
+       ('Anillos',now(),now()),
+       ('Pulseras',now(),now()),
+       ('Gargantillas',now(),now()),
+       ('Esclavas',now(),now()),
+       ('Collares',now(),now()),
+       ('Aretes',now(),now()),
+       ('Arracadas',now(),now()),
+       ('Dijes',now(),now());
+insert into tipoclientes (nivel,descuento,created_at,updated_at)
+values
+       (1,5,now(),now()),
+       (2,10,now(),now()),
+       (3,15,now(),now());
+
+insert into tipocompras (descripcion,created_at,updated_at)
+values
+       ('Compra en efectivo',now(),now()),
+       ('Transferencia bancaria',now(),now()),
+       ('Compra a credito',now(),now());
+
+insert into tipovendedores (descripción,created_at,updated_at)
+values
+       ('Venta en efectivo',now(),now()),
+       ('Transferencia bancaria',now(),now()),
+       ('Venta a credito',now(),now());
+
+insert into promociones (descripcion,descuento,created_at,updated_at)
+values
+       ('Buen fin',15,now(),now()),
+       ('Promocion navideña',10,now(),now());
+
+insert into proveedores (nombre,telefono,email,created_at,updated_at)
+values
+       ('David Pedraza','9518071223','davidP@gmail.com',now(),now()),
+       ('Amalia Bermudez','4613650971','aBermudez@gmail.com',now(),now()),
+       ('Samuel Saura','2441021436','samuelsau@gmail.com',now(),now()),
+       ('Angelica Juarez','3128567774','angijuarez@gmail.com',now(),now()),
+       ('Abelardo Nevado','4621021436','abeNe12@gmail.com',now(),now()),
+       ('Laura Esteban','4619372369','lauLE23@gmail.com',now(),now()),
+       ('Silvia Barea','4618594163','davidP@gmail.com',now(),now());
+
+insert into vendedores (nombre,telefono,email,rfc,created_at,updated_at)
+values
+       ('Ramona Cervantes','4612089060','ramon12@gmail.com','CERA770707PK6',now(),now()),
+       ('Ariana Serra','4618938644','arigameplays@gmail.com','SEAR990412U2A',now(),now()),
+       ('Alberto Segovia','4619383846','beto@gmail.com','SEAL990412H3A',now(),now());
+
+insert into metodopagos (descripcion,created_at,updated_at)
+values
+       ('Pago en efectivo',now(),now()),
+       ('Tarjeta debito',now(),now()),
+       ('Tarjeta credito',now(),now());
+
+insert into productos (idCategoria,nombre,descripcion,precio,created_at,updated_at)
+values
+       (1,'Anillo Titanio','Anillo de Zirconias',429.00,now(),now()),
+       (1,'Anillo Cuadrado','Anillo acero inoxidable',144.59,now(),now()),
+       (7,'Arracadas Acero','Cierre de Mariposa',349.00,now(),now());
+
+insert into clientes (idTipoCliente,nombre,domicilio,estado,ciudad,cp,email,telefono,rfc,created_at,updated_at)
+values
+       (1,'Gracia Carranza','22812 Karli Oval','Guanajuato','Salamanca','36700','graciaCA@gmail.com','4620665039','CAGR010913KB9',now(),now()),
+       (3,'Yolanda Mendoza','1227 Carrie Island','Guanajuato','Celaya','38020','yolisME@gmail.com','4614625524','CAGR010913KB9',now(),now());
+
+insert into pedidos (idProducto,idCliente,idVendedor,cantidad,subTotal,created_at,updated_at)
+values
+       (1,1,1,2,858.000,now(),now()),
+       (2,1,1,1,144.59,now(),now()),
+       (3,2,2,1,349.00,now(),now());
+
+insert into compras (idProveedores,idTipoCompra,idMetodoPago,fechaCompra,fechaPAgo,total,created_at,updated_at)
+values
+       (1,1,1,current_date(),current_date(),769.34,now(),now()),
+       (3,2,2,current_date(),current_date(),1300.00,now(),now()),
+       (6,3,3,current_date(),current_date(),1460.00,now(),now());
+
+insert into compras (idProveedores,idTipoCompra,idMetodoPago,fechaCompra,fechaPAgo,total,created_at,updated_at)
+values
+       (1,1,1,current_date(),current_date(),769.34,now(),now()),
+       (3,2,2,current_date(),current_date(),1300.00,now(),now()),
+       (6,3,3,current_date(),current_date(),1460.00,now(),now());
+insert into ventas (idPedido,idTipoVenta,idMetodoPago,idPromocion,fechaCompra,fechaPago,total,created_at,updated_at)
+values
+       (1,1,1,2,current_date(),current_date(),772.2,now(),now());
+
+insert into facturas (idVenta,fecha,created_at,updated_at)
+values (1,current_date(),now(),now());

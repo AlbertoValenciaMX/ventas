@@ -36,7 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Idproducto</th>
+										<th>Producto</th>
 										<th>Idcliente</th>
 										<th>Idvendedor</th>
 										<th>Cantidad</th>
@@ -50,7 +50,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $pedido->idProducto }}</td>
+											<td>{{ $pedido->productos->nombre }}</td>
 											<td>{{ $pedido->idCliente }}</td>
 											<td>{{ $pedido->idVendedor }}</td>
 											<td>{{ $pedido->cantidad }}</td>
